@@ -1,0 +1,15 @@
+.heading {
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.mayuscula {
+    text-transform: uppercase;
+}
+
+
+.btn{
+    font-size: 1.5rem;
+}

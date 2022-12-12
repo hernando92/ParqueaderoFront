@@ -37,6 +37,8 @@ export class FormularioComponent implements OnInit {
       this.cboTipoVehiculo = 0;
       this.placa = '';
 
+    }else{
+      alert('Faltan campos por diligenciar')
     }
 
   }

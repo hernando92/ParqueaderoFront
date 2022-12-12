@@ -71,6 +71,8 @@ export class SalidaVehiculoComponent implements OnChanges {
       }
 
       this.parametros.emit(objParametros)
+    }else{
+      alert('Faltan campos por diligenciar')
     }
 
   }
@@ -78,10 +80,9 @@ export class SalidaVehiculoComponent implements OnChanges {
   registrarSalida() {
 
     if (Object.entries(this.respuestaSalida).length > 0) {
-
       this.parametrosSalida.emit(this.respuestaSalida)
-
-
+    }else{
+      alert('No ha consultado el vehiculo')
     }
   }
 

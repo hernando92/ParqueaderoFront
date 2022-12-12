@@ -17,8 +17,10 @@ export class AppComponent {
   respuestaSalidaVehiculo: any = {};
   respuestaSalidaVehiculoError: string = '';
 
-  constructor(private registroVehiculoService: RegistroVehiculosService) {
+  respuestaFechas: any[] = [];
+  respuestaFechasError: string = '';
 
+  constructor(private registroVehiculoService: RegistroVehiculosService) {
   }
 
   registrarVehiculo(parametros: any) {
@@ -34,7 +36,6 @@ export class AppComponent {
       this.respuestaIngresoError = err.error.detail;
     }))
   }
-
 
   consultarPlaca(parametros: any) {
 
@@ -59,6 +60,19 @@ export class AppComponent {
     }, (err => {
       this.respuestaSalidaVehiculoError = err.error.detail;
     }))
+  }
+
+  consultarFechas(parametros: any) {
+
+    this.respuestaFechas = [];
+    this.respuestaFechasError = '';
+
+    this.registroVehiculoService.consultarFechas(parametros).subscribe(data => {
+      this.respuestaFechas = data;
+    }, (err => {
+      this.respuestaFechasError = err.error.detail;
+    }))
+
   }
 
 }

@@ -11,7 +11,15 @@
     (parametrosSalida)="registrarSalida($event)" 
     [respuestaSalidaVehiculo]="respuestaSalidaVehiculo"
     [respuestaSalidaVehiculoError]="respuestaSalidaVehiculoError"
-    
   >
   </app-salida-vehiculo>
+
+  <app-consulta-general 
+    (parametros)="consultarFechas($event)" 
+    [respuestaFechas]="respuestaFechas"
+    [respuestaFechasError]="respuestaFechasError"  
+  >
+  
+  </app-consulta-general>
+
 </div>

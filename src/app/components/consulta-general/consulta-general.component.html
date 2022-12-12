@@ -1,0 +1,40 @@
+<div class="card mt-5">
+    <h2 class="heading"> Consulta por Fechas </h2>
+    <div class="row mb-3">
+        <div class="col-lg-8 offset-lg-2">
+            <form (ngSubmit)="consultarFechas()">
+                <div class="form-group">
+                    <label class="col-form-label mt-4 mayuscula" for="inputDefault1">Fecha Inicial</label>
+                    <input  type="date" [(ngModel)]="fechaInicial" class="form-control form-control-lg mayuscula"
+                        placeholder="Fecha Inicial" name="fechaInicial">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label mt-4 mayuscula" for="inputDefault">Fecha Final</label>
+                    <input type="date" [(ngModel)]="fechaFinal" class="form-control form-control-lg mayuscula"
+                        placeholder="Fecha Final" name="fechaFinal">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">Consultar</button>
+
+                <table class="table table-hover mt-4">
+                    <thead>
+                      <tr>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Tipo Vehiculo</th>
+                        <th scope="col">Minutos</th>
+                        <th scope="col">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let item of respuestaFechas">
+                      <tr class="table-active">
+                        <td>{{item.placa}}</td>
+                        <td>{{item.tipoVehiculoDescripcion}}</td>
+                        <td>{{item.totalMinutos}}</td>
+                        <td>{{item.registroVehiculoValorTotal}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+            </form>
+        </div>
+    </div>
+</div>

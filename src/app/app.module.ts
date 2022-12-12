@@ -9,6 +9,7 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { RegistroVehiculoComponent } from './components/registro-vehiculo/registro-vehiculo.component';
 import { SalidaVehiculoComponent } from './components/salida-vehiculo/salida-vehiculo.component';
+import { ConsultaGeneralComponent } from './components/consulta-general/consulta-general.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SalidaVehiculoComponent } from './components/salida-vehiculo/salida-veh
     NavegacionComponent,
     SpinnerComponent,
     RegistroVehiculoComponent,
-    SalidaVehiculoComponent
+    SalidaVehiculoComponent,
+    ConsultaGeneralComponent
   ],
   imports: [
     BrowserModule,

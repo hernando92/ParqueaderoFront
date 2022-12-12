@@ -30,6 +30,12 @@ export class RegistroVehiculosService {
 
   }
 
+  consultarFechas(parametros: any): Observable<any> {
+
+    const URL = 'http://localhost:1835/api/RegistroVehiculo/ConsultarPorFechas?FechaInicio=' + parametros.FechaInicio + '&FechaFin=' + parametros.FechaFin;
+    return this.http.get(URL);
+
+  }
 
   registrarSalida(parametros: any): Observable<any> {
 
