@@ -1,0 +1,25 @@
+<div class="card mt-5">
+    <h2 class="heading"> Ingreso de vehiculo </h2>
+    <div class="row mb-3">
+        <div class="col-lg-8 offset-lg-2">
+            <form (ngSubmit)="registrarVehiculo()">
+                <div class="form-group">
+                    <label class="form-label mt-4 mayuscula">Tipo Vehiculo</label>
+                    <select class="form-select form-select-lg" [(ngModel)]="cboTipoVehiculo" name="cboTipoVehiculo">
+                        <option *ngFor="let tipoVehiculo of tipoVehiculos" [value]="tipoVehiculo.TipoVehiculoId">
+                            {{tipoVehiculo.TipoVehiculoDescripcion}}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label mt-4 mayuscula" for="inputDefault">Placa</label>
+                    <input type="text" [(ngModel)]="placa" class="form-control form-control-lg mayuscula"
+                        placeholder="Placa" name="txtPlaca">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">Ingresar</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
