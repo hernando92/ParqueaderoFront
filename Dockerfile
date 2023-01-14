@@ -1,9 +1,11 @@
 # satge 1
 FROM node:18.9.0 AS build-env
 WORKDIR /app
-COPY . ./
 
-RUN npm install
+COPY package.json /app 
+RUN npm install 
+COPY . /app
+
 RUN npm run build
 
 #stage 2
